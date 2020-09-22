@@ -3,7 +3,6 @@
 <p align="center"><strong>ANGULAR | REACT | VUE </strong></p>
 <p>Bootcamp com duração de 148 horas (2 meses) que tem como objetivo apresentar conceitos fundamentais sobre o desenvolvimento Front-end e praticar codificação utilizando as 3 principais ferramentas de desenvolvimento Front-end.</p><br />
 
-<br />
 <h2>Conteúdo</h2>
 
 :pushpin: [Módulo 1](https://github.com/kitkoshino/bootcamp_IGTI_frontend_developer/tree/master/modulo1) - HTML 5, CSS 3, Javascript puro <br />
