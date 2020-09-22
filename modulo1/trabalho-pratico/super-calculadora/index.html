@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="https://www.igti.com.br/wp-content/themes/wp-bootstrap-4/assets/images/logos/logo-green.png" type="image/x-icon"  >
+    <title>Super Calculadora</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <main>
+        <h1>Super Calculadora</h1>
+        <form class="inputs-container">
+          <div class="input-item">
+            <label for="primeiroNumero">Primeiro número (A):</label>
+            <input
+              type="number"
+              placeholder="primeiro número"
+              id="primeiroNumero"
+            />
+          </div>
+          <div class="input-item">
+            <label for="segundoNumero">Segundo número (B):</label>
+            <input
+              type="number"
+              placeholder="segundo número"
+              id="segundoNumero"
+            />
+          </div>
+        </form>
+        <h2>Cálculos</h2>
+        <div class="results-container">
+          <div class="result-item">
+            <label for="soma">Soma (a + b):</label>
+            <input type="text" placeholder="" id="soma" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="subtracao">Subtração 1 (a - b):</label>
+            <input type="text" placeholder="" id="subtracao" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="subtracao2">Subtração 2 (b - a):</label>
+            <input type="text" placeholder="" id="subtracao2" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="multiplicacao">Multiplicação (a x b): </label>
+            <input type="text" placeholder="" id="multiplicacao" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="divisao1">Divisão 1 (a / b) :</label>
+            <input type="text" placeholder="" id="divisao1" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="divisao2">Divisão 2 (b / a):</label>
+            <input type="text" placeholder="" id="divisao2" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="quadradoA">Quadrado de a (a2):</label>
+            <input type="text" placeholder="" id="quadradoA" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="QuadradoB">Quadrado de b (b2): </label>
+            <input type="text" placeholder="" id="quadradoB" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="divisoresA">Divisores inteiros de a: </label>
+            <input type="text" placeholder="" id="divisoresA" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="divisoresB">Divisores inteiros de b: </label>
+            <input type="text" placeholder="" id="divisoresB" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="fatorialA">Fatorial de a (a!) :</label>
+            <input type="text" placeholder="" id="fatorialA" readonly />
+          </div>
+
+          <div class="result-item">
+            <label for="fatorialB">Fatorial de b (b!): </label>
+            <input type="text" placeholder="" id="fatorialB" readonly />
+          </div>
+        </div>
+        <button id="clear">Clear</button>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
