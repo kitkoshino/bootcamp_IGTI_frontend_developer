@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./node_modules/materialize-css/dist/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <title>Desafio 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search devs</h1>
+      <div class="row">
+        <div class="input-field col s12">
+          <input value="" id="first_name2" type="text" class="validate" />
+          <label class="active" for="first_name2">Pesquisa por nome</label>
+        </div>
+      </div>
+      <div id="filterOptions">
+        <div id="checkboxes">
+          <label>
+            <input type="checkbox" />
+            <span  style="margin-right:15px">Java</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span  style="margin-right:15px">Javascript</span>
+          </label>
+          <label>
+            <input type="checkbox" />
+            <span  style="margin-right:15px">Python</span>
+          </label>
+        </div>
+
+        <div id="radioButtons">
+          <label class="option">
+            <input id="radioAnd" name="radioGroup" type="radio" />
+            <span>E</span>
+          </label>
+
+          <label class="option">
+            <input id="radioOr" name="radioGroup" type="radio" checked />
+            <span>OU</span>
+          </label>
+        </div>
+      </div>
+      <div style="margin-top: 50px;" id="divDevs"></div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  </body>
+</html>
