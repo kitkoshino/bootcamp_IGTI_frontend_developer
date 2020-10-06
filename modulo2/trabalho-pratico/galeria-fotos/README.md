@@ -3,7 +3,7 @@
 <p align="center">Trabalho prático Módulo 2</p>
 <p align="center"><img src="./src/assets/galeria-fotos.jpg" width="470"></p>
 
-## Desafio
+## :rocket: Desafio
 Construir aplicação utilizando Angular para exibir uma galeria de fotos.
 
 <br />
@@ -17,7 +17,7 @@ Construir aplicação utilizando Angular para exibir uma galeria de fotos.
 <br />
 
 
-# :video_game: Executar
+## :video_game: Executar
 
 ```bash
  #Instalar dependências:
