@@ -2,14 +2,14 @@
   <main>
     <div class="galery-container">
       <h2>{{title}}</h2>
-      <div class="empty-picture" *ngIf="!pictures.length"></div>
-      <img src={{pictures[counter]}} alt="" />
+      <div class="empty-picture" *ngIf="!pictures?.length"></div>
+      <img *ngIf="pictures?.length" src={{pictures[counter]}} alt="" />
       
       <div class="controllers">
-        <p *ngIf="pictures.length > 0">Foto {{counter + 1}} de {{pictures.length}}</p>
-        <p *ngIf="pictures.length === 0">Nenhuma foto</p>
+        <p *ngIf="pictures?.length">Foto {{counter + 1}} de {{pictures.length}}</p>
+        <p *ngIf="!pictures?.length">Nenhuma foto</p>
 
-        <div class="buttons" *ngIf="pictures.length > 0">
+        <div class="buttons" *ngIf="pictures?.length">
           <button [disabled]="counter === 0" (click) = "firstPicture()">|< </button>
           <button [disabled]="counter === 0" (click) = "changePicture(-1)"><</button>
           <button [disabled]="counter === pictures.length -1" (click) = "changePicture(1)">></button>
@@ -17,6 +17,5 @@
         </div>
       </div>
     </div>
-    
   </main>
 </div>

@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./galeria-component.component.css']
 })
 export class GaleriaComponentComponent {
-  @Input() title: string = '';
-  @Input() pictures?: string[] = [];
+  @Input() title: string;
+  @Input() pictures?: string[];
   counter: number = 0;
   show: boolean = true;
 
