@@ -2,6 +2,16 @@ mat-toolbar {
   background-image: linear-gradient(to right, rgb(0, 185, 179), rgb(0, 0, 0));
   color: white;
   font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  .back {
+    font-weight: 100;
+    font-size: 2em;
+    cursor: pointer;
+    &:hover {
+      color: rgb(0, 185, 179);
+    }
+  }
 }
 
 table,
