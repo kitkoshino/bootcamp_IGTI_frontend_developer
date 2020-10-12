@@ -17,41 +17,42 @@
       <h1>Search devs</h1>
       <div class="row">
         <div class="input-field col s12">
-          <input value="" id="first_name2" type="text" class="validate" />
-          <label class="active" for="first_name2">Pesquisa por nome</label>
+          <input value="" id="searchName" oninput="handleInputChange(event)" type="text" class="validate" />
+          <label class="active" for="searchName">Pesquisa por nome</label>
         </div>
       </div>
       <div id="filterOptions">
         <div id="checkboxes">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" oninput="handleCheckboxClick(event)" id="Java" />
             <span  style="margin-right:15px">Java</span>
           </label>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" oninput="handleCheckboxClick(event)" id="JavaScript" />
             <span  style="margin-right:15px">Javascript</span>
           </label>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" oninput="handleCheckboxClick(event)" id="Python" />
             <span  style="margin-right:15px">Python</span>
           </label>
         </div>
 
         <div id="radioButtons">
           <label class="option">
-            <input id="radioAnd" name="radioGroup" type="radio" />
+            <input id="and" name="radioGroup" type="radio" oninput="handleRadioChange(event)" />
             <span>E</span>
           </label>
 
           <label class="option">
-            <input id="radioOr" name="radioGroup" type="radio" checked />
+            <input id="or" name="radioGroup" type="radio" checked oninput="handleRadioChange(event)" />
             <span>OU</span>
           </label>
         </div>
       </div>
       <div style="margin-top: 50px;" id="divDevs"></div>
     </div>
-    <script src="./js/script.js"></script>
+
+    <script defer src="./js/script.js"></script>
     <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
   </body>
 </html>

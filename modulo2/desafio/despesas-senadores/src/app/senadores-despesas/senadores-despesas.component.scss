@@ -1,0 +1,29 @@
+mat-toolbar {
+  background-image: linear-gradient(to right, rgb(0, 185, 179), rgb(0, 0, 0));
+  color: white;
+  font-size: 1.5em;
+}
+
+table,
+td {
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
+  border-bottom: 1px solid rgba($color: #585858, $alpha: 0.3);
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-size: 1.2em;
+  height: 40px;
+  border-bottom: 1.5px solid black;
+  padding: 5px 10px;
+
+}
+
+
+.td-discrimination{
+  color: gray;
+}

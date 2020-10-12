@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <span>Despesas dos senadores (2019) - {{ senador?.nomeSenador }}</span>
+</mat-toolbar>
+
+<table style="width: 100%">
+  <tr>
+    <th colspan="2">Resumo das despesas</th>
+  </tr>
+  <tr *ngFor="let expense of expenses">
+    <td>{{ expense.description }}</td>
+    <td>{{ expense.total | number:'1.2-2' }}</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>{{getTotalExpenses() | number:'1.2-2'}}</td>
+  </tr>
+</table>
+
+<table style="width: 100%">
+  <tr>
+    <th colspan="4">Discriminação das despesas</th>
+  </tr>
+  <tr>
+    <td class="td-discrimination">Tipo de despesa</td>
+    <td class="td-discrimination">Fornecedor</td>
+    <td class="td-discrimination">Data</td>
+    <td class="td-discrimination">Valor</td>
+  </tr>
+  <tr *ngFor="let despesa of senador?.despesas">
+    <td>{{ getExpenseDescription(despesa.tipo) }}</td>
+    <td>{{ despesa.fornec }}</td>
+    <td>{{ despesa.dia + '/' + despesa.mes  + '/' + despesa.ano  }}</td>
+    <td>{{ despesa.valor | number:'0.2-2'}}</td>
+  </tr>
+</table>
