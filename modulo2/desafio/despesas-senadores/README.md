@@ -1,8 +1,10 @@
 
 <h1 align="center"> :dart: <strong>Despesas de Senadores </strong></h1>
 <p align="center">Desafio Módulo 2</p>
+<div>
   <img src="./src/assets/despesas-senadores-2.jpg" width="400">
   <img src="./src/assets/despesas-senadores.jpg" width="400">
+</div>
 
 ## :rocket: Desafio
 Construir aplicação utilizando Angular para exibir as despesas  dos senadores no ano de 2019, conforme base de dados fornecida.
