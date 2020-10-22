@@ -6,8 +6,8 @@
 
 Construir, utilizando React, uma aplicação para controlar as notas dos Módulos dos Bootcamps do IGTI e indicar se o aluno seráaprovado conforme os seguintes critérios,que foramextraídos do PPC (Plano Pedagógico dos Cursos). Caso consiga apenas um dos dois critérios abaixo, o aluno(a) setorna apto(a)a obter o certificado:
 
-- 1.Atingir 60%de aproveitamento em cada um dos 5 módulos
-- 2.OU atingir 70% de aproveitamento na soma total de pontos do Bootcamp.
+- Atingir 60%de aproveitamento em cada um dos 5 módulos
+- OU atingir 70% de aproveitamento na soma total de pontos do Bootcamp.
 
 <br />
 
@@ -20,7 +20,7 @@ Construir, utilizando React, uma aplicação para controlar as notas dos Módulo
 
 <br />
 
-### :video_game: Run
+## :video_game: Run
 
 ```bash
     #Instalar dependências:
