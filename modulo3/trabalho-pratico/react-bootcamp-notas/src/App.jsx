@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>Controle de notas do Bootcamp IGTI com React</h1>
+      <hr />
       <div className="content">
         <Grades setGrades={setGrades} />
         <Calculations grades={grades} />
