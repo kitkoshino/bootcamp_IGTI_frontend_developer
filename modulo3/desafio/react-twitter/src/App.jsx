@@ -5,13 +5,13 @@ function App() {
   return (
     <div className="App">
       <aside className="sidebar">
-        <h1>left</h1>
+        <h1>menu</h1>
       </aside>
       <main>
         <Home />
       </main>
       <aside className="right-bar">
-      <h1>right</h1>
+      <h1>aside</h1>
       </aside>
     </div>
   );

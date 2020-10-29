@@ -35,22 +35,21 @@ function Home() {
   }
 
   function submit() {
+    console.log('submit');
     if (remainCharacters < 0) {
       setCanTweet(false);
-      console.log('mais de 280 caracs', canTweet);
     } else {
       createTweet(newTweetText)
         .then((tweet) => {
-          console.log(tweet, canTweet);
+          listTweets().then((res) => setTweets(res));
         })
         .catch((err) => console.log(err));
-
-        listTweets().then((res) => setTweets(res));
     }
   }
 
   return (
     <div className="home-container">
+      {!canTweet && <Alert onClose={() => setCanTweet(true)} severity="error" >This is a success alert — check it out!</Alert>}
       <div className="tweet-container">
         <label htmlFor="new-tweet">What's going on?</label>
         <textarea
