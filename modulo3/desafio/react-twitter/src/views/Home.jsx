@@ -8,7 +8,9 @@ function Home() {
   const [tweets, setTweets] = useState([]);
   const [newTweetText, setNewTweetText] = useState('');
   const [remainCharacters, setRemainCharacters] = useState(280);
-  const [remainCharactersClass, setRemainCharactersClass] = useState('green-color');
+  const [remainCharactersClass, setRemainCharactersClass] = useState(
+    'green-color'
+  );
   const [canTweet, setCanTweet] = useState(true);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ function Home() {
   }, [newTweetText]);
 
   function removeTweet(tweetId) {
-    setTweets(tweets.filter(tweet => tweet.id !== tweetId));
+    setTweets(tweets.filter((tweet) => tweet.id !== tweetId));
   }
 
   function submit() {
@@ -42,6 +44,8 @@ function Home() {
       createTweet(newTweetText)
         .then((tweet) => {
           listTweets().then((res) => setTweets(res));
+          setNewTweetText('');
+          document.querySelector('textarea').focus();
         })
         .catch((err) => console.log(err));
     }
@@ -49,7 +53,11 @@ function Home() {
 
   return (
     <div className="home-container">
-      {!canTweet && <Alert onClose={() => setCanTweet(true)} severity="error" >This is a success alert — check it out!</Alert>}
+      {!canTweet && (
+        <Alert onClose={() => setCanTweet(true)} severity="error">
+          Eita textão! Verifique e retire algumas palavras.{' '}
+        </Alert>
+      )}
       <div className="tweet-container">
         <label htmlFor="new-tweet">What's going on?</label>
         <textarea
@@ -68,7 +76,12 @@ function Home() {
         </div>
       </div>
       {tweets?.map((tweet) => (
-        <Tweet afterRemove={removeTweet} content={tweet.value} tweetId={tweet.id} key={tweet.id} />
+        <Tweet
+          afterRemove={removeTweet}
+          content={tweet.value}
+          tweetId={tweet.id}
+          key={tweet.id}
+        />
       ))}
     </div>
   );
