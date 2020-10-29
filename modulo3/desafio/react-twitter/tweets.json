@@ -1,0 +1,16 @@
+{
+  "tweets": [
+    {
+      "id": "f0057d0c-19ef-421f-9b87-14995591a134",
+      "value": "Faça o computador trabalhar para você."
+    },
+    {
+      "id": "7c1033be-bc9d-4526-84d5-9cebe343062d",
+      "value": "Angular, React e Vue são excelentes ferramentas para desenvolvimento Front End."
+    },
+    {
+      "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeeoooooooooooooooooppppppppppppppppppqqqqqqqqqqqqqqqqqqqqzzzzz",
+      "id": "ffe20697-c98e-48ca-8ec3-64c7a1d8e68d"
+    }
+  ]
+}
