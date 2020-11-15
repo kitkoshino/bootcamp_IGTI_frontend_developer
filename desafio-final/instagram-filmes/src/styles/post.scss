@@ -1,0 +1,46 @@
+.post {
+  display: grid;
+  grid-template-columns: [col1]1fr [col2]1fr;
+  grid-template-rows: [row1]auto [row2]1fr;
+  grid-column-gap: 20px;
+  height: auto;
+  border: 1px solid rgba(189, 195, 199, 1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  img {
+    grid-row: row1 / span 2;
+    width: 100%;
+  }
+
+  .post__user {
+    grid-column: col2;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-height: 200px;
+    border: 1px solid rgba(189, 195, 199, 1);
+    margin-bottom: 20px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+    .post__infos {
+      display: flex;
+
+      .post__name {
+        font-weight: 700;
+        margin: 0 10px;
+      }
+      .post__descricao {
+        max-width: 100%;
+      }
+    }
+
+  
+  }
+}
