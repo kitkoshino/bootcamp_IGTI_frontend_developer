@@ -13,4 +13,13 @@ const listPosts = async () => {
   }
 };
 
-export { listPosts };
+const listComments = async (id) => {
+  try {
+    const result = await baseServices.get('/comments', {params: {postId: id}});
+    return result.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { listPosts, listComments };

@@ -21,7 +21,7 @@ function App() {
       <main>
         {posts.map((post) => (
           
-         <Post key={post.id} picture={post.picture} description={post.title} owner={post.user}/>
+         <Post key={post.id} picture={post.picture} description={post.title} owner={post.user} id={post.id}/>
         ))}
       </main>
     </div>
