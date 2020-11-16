@@ -22,4 +22,13 @@ const listComments = async (id) => {
   }
 }
 
-export { listPosts, listComments };
+const listLikes = async (id) => {
+  try {
+    const result = await baseServices.get('/likes', {params: {postId: id}});
+    return result.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { listPosts, listComments , listLikes};

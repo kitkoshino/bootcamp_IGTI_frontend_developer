@@ -4,13 +4,15 @@ import { BiCommentDots } from 'react-icons/bi';
 import '../styles/post.scss';
 import Superman from '../img/superman.png';
 import Comment from './Comment';
-import { listComments } from '../services/services';
+import { listComments, listLikes } from '../services/services';
 
 function Post({ picture, description, owner, id }) {
   const [comments, setComments] = useState([]);
+  const [likes, setLikes] = useState([]);
 
   useEffect(() => {
     listComments(id).then((res) => setComments(res));
+    listLikes(id).then((res) => setLikes(res));
   }, [id]);
 
   return (
@@ -24,12 +26,16 @@ function Post({ picture, description, owner, id }) {
         </div>
       </div>
       <div className="post__likes">
-        <span>10</span> <FiHeart />
-        <span>20</span> <BiCommentDots />
+        <span>{likes.length}</span> <FiHeart />
+        <span>{comments.length}</span> <BiCommentDots />
       </div>
       <div className="comment">
-        {comments.map(comment => (
-          <Comment key={comment.id} commentText={comment.comment} user={comment.user} />
+        {comments.map((comment) => (
+          <Comment
+            key={comment.id}
+            commentText={comment.comment}
+            user={comment.user}
+          />
         ))}
       </div>
     </div>

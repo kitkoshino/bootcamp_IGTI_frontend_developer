@@ -7,7 +7,7 @@ function Comment({ commentText, user }) {
     <div className="comment__item">
       <img src={WonderWoman} alt="comment owner" />
       <div className="comment__user">
-  <p className="comment__name">{user}</p>
+        <p className="comment__name">{user}</p>
         <div className="comment__text">
           <p>{commentText}</p>
         </div>
