@@ -1,8 +1,9 @@
 .post {
   display: grid;
   grid-template-columns: [col1]1fr [col2]1fr;
-  grid-template-rows: [row1]auto [row2]1fr;
+  grid-template-rows: [row1]auto [row3]25px [row2]1fr;
   grid-column-gap: 20px;
+  grid-row-gap: 10px;
   height: auto;
   border: 1px solid rgba(189, 195, 199, 1);
   border-radius: 10px;
@@ -10,19 +11,18 @@
   margin-bottom: 20px;
 
   img {
-    grid-row: row1 / span 2;
+    grid-row: row1 / span 3;
     width: 100%;
   }
 
   .post__user {
     grid-column: col2;
     display: flex;
-    align-items: center;
+    align-items: start;
     padding: 10px;
     width: 100%;
     max-height: 200px;
     border: 1px solid rgba(189, 195, 199, 1);
-    margin-bottom: 20px;
 
     img {
       width: 50px;
@@ -31,6 +31,7 @@
     }
     .post__infos {
       display: flex;
+      flex-direction: column;
 
       .post__name {
         font-weight: 700;
@@ -38,9 +39,23 @@
       }
       .post__descricao {
         max-width: 100%;
+        margin: 10px;
       }
     }
 
-  
+    
+  }
+  .post__likes {
+    grid-row: row3;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: 0 5px;
+    }
+    svg {
+      font-size: 20px;
+      margin-right: 10px;
+    }
   }
 }
