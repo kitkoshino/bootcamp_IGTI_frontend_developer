@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
 import Batman from '../img/batman.png';
 import Superman from '../img/superman.png';
@@ -33,18 +32,18 @@ function Header() {
     listCommentsByPostIds(postsId).then((res) => {
       setCommentsNumber(res.length);
     });
-  }, [posts]);
+  }, [posts,user]);
 
-  function handleActiveUser(e) {
-    // setUser(e);
-    console.log('click', e)
-  }
+  // function handleActiveUser(e) {
+  //   // setUser(e);
+  //   console.log('click', e)
+  // }
 
   return (
     <div className="menu">
-      {/* {console.log('comment por id', commentPerPostId)} */}
+      {console.log(user)}
       <div className="menu__profile">
-        <img src={Superman} alt="superman" />
+        <img src={user === 'superman' ? Superman : user === 'batman' ? Batman : WonderWoman } alt="superman" />
         <div className="profile__infos">
           <h2>{user.charAt(0).toUpperCase() + user.slice(1)}</h2>
           <p>{posts.length} posts</p>
@@ -57,15 +56,15 @@ function Header() {
         <div className="users__list">
           <div className={`users__info ${user === 'batman' ? 'users__info--active' : ''} `} onClick={(e) => setUser('batman')}>
             <img src={Batman} alt="" />
-            <p>{bestFriends[0].charAt(0).toUpperCase() + bestFriends[0].slice(1)}</p>
+            <p>{bestFriends[0]}</p>
           </div>
           <div  className={`users__info ${user === 'superman' ? 'users__info--active' : ''} `} onClick={(e) => setUser('superman')}>
             <img src={Superman} alt="" />
             <p>Superman</p>
           </div>
-          <div  className={`users__info ${user === 'wonderwoman' ? 'users__info--active' : ''} `} onClick={(e) => setUser('wonderwoman')}>
+          <div  className={`users__info ${user === 'wonderWoman' ? 'users__info--active' : ''} `} onClick={(e) => setUser('wonderWoman')}>
             <img src={WonderWoman} alt="" />
-            <p>{bestFriends[1].charAt(0).toUpperCase() + bestFriends[1].slice(1)}</p>
+            <p>{bestFriends[1]}</p>
           </div>
         </div>
       </div>
