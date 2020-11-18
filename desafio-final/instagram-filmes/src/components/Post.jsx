@@ -4,15 +4,15 @@ import { BiCommentDots } from 'react-icons/bi';
 import '../styles/post.scss';
 import Superman from '../img/superman.png';
 import Comment from './Comment';
-import { listComments, listLikes } from '../services/services';
+import { listCommentsByPostIds, listLikesByPostIds } from '../services/services';
 
 function Post({ picture, description, owner, id }) {
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
 
   useEffect(() => {
-    listComments(id).then((res) => setComments(res));
-    listLikes(id).then((res) => setLikes(res));
+    listCommentsByPostIds(id).then((res) => setComments(res));
+    listLikesByPostIds(id).then((res) => setLikes(res));
   }, [id]);
 
   return (
