@@ -1,0 +1,14 @@
+.skeleton__comment {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  margin-bottom: 20px;
+  .skeleton__image {
+    margin: 0 10px;
+  }
+  .skeleton__infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -4,19 +4,28 @@ import { BiCommentDots } from 'react-icons/bi';
 import '../styles/post.scss';
 import Superman from '../img/superman.png';
 import Comment from './Comment';
-import { listCommentsByPostIds, listLikesByPostIds } from '../services/services';
+import {
+  listCommentsByPostIds,
+  listLikesByPostIds
+} from '../services/services';
+import CommentSkeleton from './CommentSkeleton';
 
 function Post({ picture, description, owner, id }) {
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    listCommentsByPostIds(id).then((res) => setComments(res));
+    listCommentsByPostIds(id)
+      .then((res) => setComments(res))
+      .then(() => setIsLoading(false));
     listLikesByPostIds(id).then((res) => setLikes(res));
   }, [id]);
 
   return (
     <div className="post">
+      {/* <Skeleton duration = {2} height={50}/> */}
+      {console.log(isLoading)}
       <img src={picture} alt="poster" />
       <div className="post__user">
         <img src={Superman} alt="" />
@@ -30,13 +39,21 @@ function Post({ picture, description, owner, id }) {
         <span>{comments.length}</span> <BiCommentDots />
       </div>
       <div className="comment">
-        {comments.map((comment) => (
-          <Comment
-            key={comment.id}
-            commentText={comment.comment}
-            user={comment.user}
-          />
-        ))}
+        {isLoading ? (
+          <>
+            <CommentSkeleton />
+            <CommentSkeleton />
+            <CommentSkeleton />
+          </>
+        ) : (
+          comments.map((comment) => (
+            <Comment
+              key={comment.id}
+              commentText={comment.comment}
+              user={comment.user}
+            />
+          ))
+        )}
       </div>
     </div>
   );
