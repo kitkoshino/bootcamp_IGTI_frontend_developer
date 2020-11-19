@@ -3,7 +3,6 @@ import './App.scss';
 import Header from './components/Header';
 import Post from './components/Post';
 import { listPosts } from './services/services';
-import Skeleton from 'react-loading-skeleton';
 
 
 function App() {
