@@ -14,6 +14,7 @@ function Post({ picture, description, owner, id }) {
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [displayLikes, setDisplayLikes] = useState(false);
 
   useEffect(() => {
     listCommentsByPostIds(id)
@@ -22,22 +23,30 @@ function Post({ picture, description, owner, id }) {
     listLikesByPostIds(id).then((res) => setLikes(res));
   }, [id]);
 
+
+
   return (
     <div className="post">
       {/* <Skeleton duration = {2} height={50}/> */}
-      {console.log(isLoading)}
+      {/* {console.log(likes)} */}
       <img src={picture} alt="poster" />
       <div className="post__user">
-        <img src={Superman} alt="" />
+        <img src={Superman} alt="user" />
         <div className="post__infos">
           <p className="post__name">{owner}</p>
           <p className="post__descricao">{description}</p>
         </div>
       </div>
       <div className="post__likes">
-        <span>{likes.length}</span> <FiHeart />
+        <span>{likes.length}</span> <FiHeart onClick={() => setDisplayLikes(!displayLikes)}/>
         <span>{comments.length}</span> <BiCommentDots />
       </div>
+      {console.log(displayLikes)}
+      <div className= {displayLikes ? 'post__likes--user' : 'post__likes--notShow'}>
+          {likes.map((like) => (
+            <span>{like.user}</span>
+          ))}
+        </div>
       <div className="comment">
         {isLoading ? (
           <>

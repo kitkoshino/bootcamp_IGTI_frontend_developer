@@ -34,7 +34,7 @@ heros
 function Comment({ commentText, user }) {
   return (
     <div className="comment__item">
-      {console.log('user comment', user)}
+      {/* {console.log('user comment', user)} */}
       <img src={heros.get(user)} alt={user} />
       <div className="comment__user">
         <p className="comment__name">{user}</p>

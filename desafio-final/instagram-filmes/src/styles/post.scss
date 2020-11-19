@@ -42,13 +42,12 @@
         margin: 10px;
       }
     }
-
-    
   }
   .post__likes {
     grid-row: row3;
     display: flex;
     align-items: center;
+    position: relative;
 
     span {
       margin: 0 5px;
@@ -57,5 +56,27 @@
       font-size: 20px;
       margin-right: 10px;
     }
+  }
+
+  .post__likes--user {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(56, 56, 56);
+    z-index: 2;
+    grid-row: row2;
+    grid-column: col2;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    color: white;
+  }
+
+  .post__likes--notShow {
+    display: none;
+  }
+
+  .comment {
+    grid-column: col2;
+    grid-row: row2;
   }
 }
