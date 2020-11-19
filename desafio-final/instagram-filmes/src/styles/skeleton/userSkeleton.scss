@@ -3,5 +3,9 @@
   align-items: center;
   padding: 10px;
   height: 100%;
-  background-color: rgb(245, 245, 245);
+
+  .skeleton__image {
+    padding: 5px;
+    box-sizing: border-box;
+  }
 }

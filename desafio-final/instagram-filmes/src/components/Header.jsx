@@ -8,7 +8,7 @@ import {
   listLikesByPostIds,
   listPostsByUserId
 } from '../services/services';
-import UserSkeleton from '../components/UserSkeleton';
+import SkeletonUsers from '../components/skeletons/skeletonUserMenu';
 import '../styles/header.scss';
 
 function Header() {
@@ -64,13 +64,13 @@ function Header() {
           <p>{commentsNumber} comentários</p>
         </div>
       </div>
-      <div className="menu__users">
-        <h3>Visualizar timeline como:</h3>
-        {console.log('load header', isLoading)}
-        <div className="users__list">
-          {isLoading ? (
-            <UserSkeleton />
-          ) : (
+      {isLoading ? (
+        <SkeletonUsers />
+      ) : (
+        <div className="menu__users">
+          <h3>Visualizar timeline como:</h3>
+          {console.log('load header', isLoading)}
+          <div className="users__list">
             <div
               className={`users__info ${
                 user === 'batman' ? 'users__info--active' : ''
@@ -80,10 +80,7 @@ function Header() {
               <img src={Batman} alt="" />
               <p>{bestFriends[0]}</p>
             </div>
-          )}
-          {isLoading ? (
-            <UserSkeleton />
-          ) : (
+
             <div
               className={`users__info ${
                 user === 'superman' ? 'users__info--active' : ''
@@ -93,10 +90,7 @@ function Header() {
               <img src={Superman} alt="" />
               <p>Superman</p>
             </div>
-          )}
-          {isLoading ? (
-            <UserSkeleton />
-          ) : (
+
             <div
               className={`users__info ${
                 user === 'wonderWoman' ? 'users__info--active' : ''
@@ -106,9 +100,9 @@ function Header() {
               <img src={WonderWoman} alt="" />
               <p>{bestFriends[1]}</p>
             </div>
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

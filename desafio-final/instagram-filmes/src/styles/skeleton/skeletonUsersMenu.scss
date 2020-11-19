@@ -1,0 +1,33 @@
+.skeleton__users {
+  background-color: rgb(245, 245, 245);
+  height: 140px;
+  width: 50%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .skeleton__title {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skeleton__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+
+    .skeleton__items {
+      display: flex;
+      align-items: center;
+
+      .skeleton__image {
+        margin: 5px;
+
+      }
+    }
+  }
+}
