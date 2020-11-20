@@ -55,6 +55,7 @@
     svg {
       font-size: 20px;
       margin-right: 10px;
+      cursor: pointer;
     }
   }
 
@@ -69,6 +70,9 @@
     height: fit-content;
     padding: 5px;
     color: white;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(140, 140, 140, 1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(140, 140, 140, 1);
+    box-shadow: 1px 1px 5px 0px rgba(140, 140, 140, 1);
   }
 
   .post__likes--notShow {

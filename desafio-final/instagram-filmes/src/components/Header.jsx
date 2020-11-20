@@ -69,7 +69,7 @@ function Header() {
       ) : (
         <div className="menu__users">
           <h3>Visualizar timeline como:</h3>
-          {console.log('load header', isLoading)}
+          {/* {console.log('load header', isLoading)} */}
           <div className="users__list">
             <div
               className={`users__info ${

@@ -38,10 +38,9 @@ function Post({ picture, description, owner, id }) {
         </div>
       </div>
       <div className="post__likes">
-        <span>{likes.length}</span> <FiHeart onClick={() => setDisplayLikes(!displayLikes)}/>
+        <span>{likes.length}</span> <FiHeart onMouseEnter={() => setDisplayLikes(true)} onMouseLeave={() => setDisplayLikes(false)}/>
         <span>{comments.length}</span> <BiCommentDots />
       </div>
-      {console.log(displayLikes)}
       <div className= {displayLikes ? 'post__likes--user' : 'post__likes--notShow'}>
           {likes.map((like) => (
             <span>{like.user}</span>
